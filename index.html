@@ -10,23 +10,28 @@
 </head>
 <body>
   <header class="hero">
-    <h1>Aktionsübersicht</h1><br>
-    <h2>Klima & Krawall Kampagne</h2><br>
-    <p id="daysUntilElection">Tage bis zur Wahl werden geladen...</p>
+  <div class="hero-content">
+    <div class="hero-left">
+      <h1>Aktionsübersicht</h1><br>
+      <h2>Klima & Krawall Kampagne</h2><br>
+      <p id="daysUntilElection">Tage bis zur Wahl werden geladen...</p>
 
-    <div class="top-links">
-      <a href="https://forms.gle/ArCBG4jLtoaZKkpD9" target="_blank">📝 Aktion anmelden</a>
-      <a href="https://gj-berlin.de/wahlkampf2026/" target="_blank">🌐 Kampagnen Website</a>
-      <a href="mailto:wahlkampf@gj-berlin.de" target="_blank">📧 E-Mail</a>
-      <a href="https://signal.me/#eu/K5jhTIumgG47y2o0rNevc4AKnJ0hHgm58dlZfFdf-yilC-lvflhH8oNR7Ted1zQa" target="_blank">💬 Signal-Chat</a>
+      <div class="top-links">
+        <a href="https://forms.gle/ArCBG4jLtoaZKkpD9" target="_blank">📝 Aktion anmelden</a>
+        <a href="https://gj-berlin.de/wahlkampf2026/" target="_blank">🌐 Kampagnen Website</a>
+        <a href="mailto:wahlkampf@gj-berlin.de" target="_blank">📧 E-Mail</a>
+        <a href="https://signal.me/#eu/K5jhTIumgG47y2o0rNevc4AKnJ0hHgm58dlZfFdf-yilC-lvflhH8oNR7Ted1zQa" target="_blank">💬 Signal-Chat</a>
+      </div>
     </div>
-  </header>
+
+    <aside class="hero-scoreboard">
+      <h3>🏆 KV-Scoreboard</h3>
+      <div id="scoreboard" class="scoreboard"></div>
+    </aside>
+  </div>
+</header>
 
   <main>
-    <section class="scoreboard-section">
-      <h2>🏆 KV-Scoreboard</h2>
-      <div id="scoreboard" class="scoreboard"></div>
-    </section>
 
     <section class="filters">
       <select id="kvFilter">
@@ -51,11 +56,11 @@
   <button id="showCalendarBtn">Kalender</button>
 </div>
 <section id="listView">
-  <h2 id="upcomingTitle">Kommende Aktionen</h2>
+  <!--<h2 id="upcomingTitle">Kommende Aktionen</h2 -->
   <div id="events" class="events"></div>
 </section>
 <section id="calendarView" class="calendar-section hidden">
-  <h2>Kalender</h2>
+  <!--<h2>Kalender</h2 -->
   <div id="calendar" class="calendar-grid"></div>
 </section>
 
@@ -63,6 +68,7 @@
 
   <footer>
     <p>Fragen oder Fehler? Schreib in den <a href="https://signal.me/#eu/K5jhTIumgG47y2o0rNevc4AKnJ0hHgm58dlZfFdf-yilC-lvflhH8oNR7Ted1zQa" target="_blank">Signal-Chat</a>.</p>
+    <p>Quellcode auf <a href="https://github.com/BennetDy/Aktionstermine">GitHub</a>.</p>
   </footer>
 
   <script src="script.js"></script>

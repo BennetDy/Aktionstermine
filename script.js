@@ -51,12 +51,14 @@ function loadEvents() {
       today.setHours(0, 0, 0, 0);
 
       allEvents = parsedEvents.filter(event => event.startDateTime >= today);
-      const pastEvents = parsedEvents.filter(event => event.startDateTime < today);
+const pastEvents = parsedEvents.filter(event => event.startDateTime < today);
 
-      fillFilters();
-      renderScoreboardFromPastEvents(pastEvents);
-      renderEvents();
-      renderCalendar(allEvents);
+fillFilters();
+renderScoreboardFromPastEvents(pastEvents);
+renderEvents();
+
+// Kalender bekommt ALLE Termine
+renderCalendar(parsedEvents);
     },
     error: function (error) {
       document.getElementById("events").innerHTML =
