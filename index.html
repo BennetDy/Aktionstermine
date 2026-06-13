@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aktionsübersicht</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <h1>Aktionsübersicht</h1><br>
+    <h2>Klima & Krawall Kampagne</h2><br>
+    <p id="daysUntilElection">Tage bis zur Wahl werden geladen...</p>
+
+    <div class="top-links">
+      <a href="https://forms.gle/ArCBG4jLtoaZKkpD9" target="_blank">📝 Aktion anmelden</a>
+      <a href="https://gj-berlin.de/wahlkampf2026/" target="_blank">🌐 Kampagnen Website</a>
+      <a href="mailto:wahlkampf@gj-berlin.de" target="_blank">📧 E-Mail</a>
+      <a href="https://signal.me/#eu/K5jhTIumgG47y2o0rNevc4AKnJ0hHgm58dlZfFdf-yilC-lvflhH8oNR7Ted1zQa" target="_blank">💬 Signal-Chat</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="scoreboard-section">
+      <h2>🏆 KV-Scoreboard</h2>
+      <div id="scoreboard" class="scoreboard"></div>
+    </section>
+
+    <section class="filters">
+      <select id="kvFilter">
+        <option value="Alle">Alle Kreisverbände</option>
+      </select>
+
+      <select id="artFilter">
+        <option value="Alle">Alle Aktionsarten</option>
+      </select>
+
+      <select id="timeFilter">
+        <option value="all">Alle zukünftigen Aktionen</option>
+        <option value="7">Nächste 7 Tage</option>
+        <option value="14">Nächste 14 Tage</option>
+        <option value="30">Nächste 30 Tage</option>
+      </select>
+
+      <input id="searchInput" type="text" placeholder="Suche nach Titel, Ort, Person..." />
+    </section>
+    <div class="view-toggle">
+  <button id="showListBtn" class="active">Terminübersicht</button>
+  <button id="showCalendarBtn">Kalender</button>
+</div>
+<section id="listView">
+  <h2 id="upcomingTitle">Kommende Aktionen</h2>
+  <div id="events" class="events"></div>
+</section>
+<section id="calendarView" class="calendar-section hidden">
+  <h2>Kalender</h2>
+  <div id="calendar" class="calendar-grid"></div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>Fragen oder Fehler? Schreib in den <a href="https://signal.me/#eu/K5jhTIumgG47y2o0rNevc4AKnJ0hHgm58dlZfFdf-yilC-lvflhH8oNR7Ted1zQa" target="_blank">Signal-Chat</a>.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
