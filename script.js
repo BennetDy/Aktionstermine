@@ -299,7 +299,15 @@ function renderEventCard(event) {
             <span>📍 ${escapeHTML(event.location || "Treffpunkt folgt")}</span>
           </div>
 
-          <div>👤 ${escapeHTML(contactText || "Ansprechperson folgt")}</div>
+          <div class="contact-row">
+  <span>👤 ${escapeHTML(contactText || "Ansprechperson folgt")}</span>
+
+  ${event.hints ? `
+    <span class="event-hints">
+      ℹ️ ${escapeHTML(event.hints)}
+    </span>
+  ` : ""}
+</div>
         </div>
       </div>
     </article>
